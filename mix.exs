@@ -1,9 +1,13 @@
 defmodule NervesSystemEv3.Mixfile do
   use Mix.Project
 
+  @version Path.join(__DIR__, "VERSION")
+    |> File.read!
+    |> String.strip
+
   def project do
     [app: :nerves_system_ev3,
-     version: "0.4.0-rc3",
+     version: @version,
      elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:nerves_system],
      description: description,
@@ -17,7 +21,7 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp deps do
     [{:nerves_system, github: "nerves-project/nerves_system"},
-     {:nerves_system_br, github: "nerves-project/nerves-system-br"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", tag: "v0.4.0"},
      {:nerves_toolchain_arm_unknown_linux_gnueabi, github: "nerves-project/nerves_toolchain_arm_unknown_linux_gnueabi"}]
   end
 
