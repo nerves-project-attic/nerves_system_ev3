@@ -33,7 +33,10 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp package do
     [maintainers: ["Frank Hunleth", "Justin Schneck"],
-     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions", "fwup.conf", "linux-3.16-ev3dev.defconfig", "post-createfs.sh"],
+     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs",
+             "README.md", "VERSION", "rootfs-additions", "fwup.conf",
+             "linux-3.16-ev3dev.defconfig", "post-createfs.sh",
+             "nerves_logo_178x128.pbm"],
      licenses: ["Apache 2.0"],
      links: %{"Github" => "https://github.com/nerves-project/nerves_system_ev3"}]
   end

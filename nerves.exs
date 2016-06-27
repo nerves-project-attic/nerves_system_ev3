@@ -18,6 +18,7 @@ config :nerves_system_ev3, :nerves_env,
       "rootfs-additions",
       "post-createfs.sh",
       "fwup.conf",
-      "linux-3.16-ev3dev.defconfig"
+      "linux-3.16-ev3dev.defconfig",
+      "nerves_logo_178x128.pbm"
     ]
   ]
