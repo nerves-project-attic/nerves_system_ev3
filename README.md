@@ -48,6 +48,8 @@ Loading the `legoev3_ports` driver automatically disables the port. To leave it 
 
     options legoev3_ports disable_in_port=1
 
+See the `rootfs_additions` for updating or overriding this file.
+
 ## Supported USB WiFi devices
 
 The base image includes drivers and firmware for Ralink RT53xx
@@ -100,10 +102,28 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [applications: [:nerves_system_ev3]]
         end
 
+## SDCard vs. internal NAND Flash notes
+
+The EV3 brick has a 16 MB NAND Flash inside it that's connected to SPI bus 0.
+It doesn't look like the ev3dev project has included support for it yet except
+in their version of u-boot. The means that it can only be programmed using the
+Lego supplied tools. The 16 MB NAND Flash also has a couple other issues. First,
+it appears to be super slow. This leads to them copying the whole image to
+DRAM instead of reading it as needed. It appears that this uses up 10 MB of
+DRAM compared to running off the SDCard. This is significant when you consider
+that the board only has 64 MB total DRAM. On the other hand, programming the
+internal NAND Flash is cool and the direction that we'd prefer to go on
+production systems.
+
+Currently, the u-boot in the internal NAND Flash that's supplied by Lego and the
+ev3dev project expects the `uImage` in the first VFAT partition. Ideally, it
+would extract it out of the rootfs so that we could implement more atomic
+firmware updates. To avoid the need to reflash the firmware to use Nerves, I'm
+staying with the existing mechanism.
 
 ## ev3dev
 
-This port draws subtantially on the [ev3dev](http://www.ev3dev.org/)
+This port draws substantially on the [ev3dev](http://www.ev3dev.org/)
 project. In general, if there's a way to do something in ev3dev,
 it can be made to work in Nerves. Nerves uses the same Linux kernel
 from the ev3dev project and enables the same set of custom drivers
