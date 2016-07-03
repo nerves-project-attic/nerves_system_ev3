@@ -53,7 +53,8 @@ See the `rootfs_additions` for updating or overriding this file.
 ## Supported USB WiFi devices
 
 The base image includes drivers and firmware for Ralink RT53xx
-(`rt2800usb` driver) and RealTek RTL8712U (`r8712u` driver) devices.
+(`rt2800usb` driver), RealTek RTL8712U (`r8712u` driver), and RealTek RTL8188EU
+(`r8188eu` driver) devices.
 
 We are still working out which subset of all possible WiFi dongles to
 support in our images. At some point, we may have the option to support
