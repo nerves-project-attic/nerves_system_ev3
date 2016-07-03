@@ -19,6 +19,7 @@ config :nerves_system_ev3, :nerves_env,
       "post-createfs.sh",
       "fwup.conf",
       "linux-3.16-ev3dev.defconfig",
+      "ev3-busybox.config",
       "nerves_logo_178x128.pbm"
     ]
   ]
