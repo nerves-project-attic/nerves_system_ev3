@@ -21,7 +21,7 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp deps do
     [{:nerves_system, "~> 0.1.4"},
-     {:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "edc6a51c4254b26161e1d3b40765739a61e1980d"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", ref: "0fe24ee5b37a3a0fb75e6799f9a50ad9d9502428"},
      #{:nerves_system_br, "~> 0.6.0"},
      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.7.0"}]
   end
