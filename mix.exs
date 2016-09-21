@@ -21,16 +21,8 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp deps do
     [{:nerves_system, "~> 0.1.4"},
-      #{:nerves_system_br, "~> 0.6.1"},
-     {:nerves_system_br, github: "nerves-project/nerves_system_br", tag: "26145be1d313387cdd3cefb7c233fedde806e727"},
-     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi,
-        github: "nerves-project/toolchains",
-        sparse: "nerves_toolchain_armv5tejl_unknown_linux_musleabi"},
-     {:nerves_toolchain_ctng,
-        github: "nerves-project/toolchains",
-        sparse: "nerves_toolchain_ctng",
-        override: true}
-    ]
+     {:nerves_system_br, "~> 0.7.0"},
+     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.7.0"}]
   end
 
   defp description do
