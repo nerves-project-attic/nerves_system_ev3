@@ -9,6 +9,8 @@ defmodule NervesSystemEv3.Mixfile do
     [app: :nerves_system_ev3,
      version: @version,
      elixir: "~> 1.2",
+     archives: [nerves_bootstrap: "~> 0.2.1"],
+     aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]],
      compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
