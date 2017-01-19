@@ -12,7 +12,7 @@ This is the base Nerves System configuration for the Lego Mindstorms EV3 brick.
 | CPU                  | 300 MHz ARM926EJ-S              |
 | Memory               | 64 MB DRAM                      |
 | Storage              | 16 MB Flash and MicroSD         |
-| Linux kernel         | 3.16 w/ ev3dev patches          |
+| Linux kernel         | 4.4 w/ ev3dev patches           |
 | Display              | 178x128 LCD - /dev/fb0          |
 | IEx terminal         | Optional - ttyS1 via port 1 ([console adapter](http://www.mindsensors.com/ev3-and-nxt/40-console-adapter-for-ev3) required) |
 | GPIO, I2C, SPI       | Yes - ev3dev drivers            |
