@@ -20,10 +20,10 @@ config pkg, :nerves_env,
   ],
   checksum: [
     "rootfs-additions",
-    "post-createfs.sh",
     "fwup.conf",
-    "linux-3.16-ev3dev.defconfig",
+    "linux-4.4-ev3dev.defconfig",
     "ev3-busybox.config",
     "nerves_logo_178x128.pbm",
+    "post-createfs.sh",
     "VERSION"
   ]
