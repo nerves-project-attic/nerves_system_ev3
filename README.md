@@ -44,11 +44,17 @@ The EV3 supports a special UART output on port 1. Nerves uses this output for Li
 
 You will either need to buy a [console adapter](http://www.mindsensors.com/ev3-and-nxt/40-console-adapter-for-ev3) or build [one](http://botbench.com/blog/2013/08/15/ev3-creating-console-cable/) to use this port.
 
-Loading the `legoev3_ports` driver automatically disables the port. To leave it enabled, load the module with the `disable_in_port=1` option. To make this happen automatically without changing your code, add the file `/etc/modprove.d/ev3.conf` to your roofs overlay and add the line:
+Loading the `legoev3_ports` driver automatically disables the console port. Since we're working on the EV3
+and it's not as easy to use as it should be, we've told the `legoev3_ports`
+module to not touch it. If you're on the EV3, you'll see the following line in
+`/etc/modprobe.d/ev3dev.conf`:
 
     options legoev3_ports disable_in_port=1
 
-See the `rootfs_additions` for updating or overriding this file.
+If you want to use port 1, you'll need to disable this. To do this, add a
+`/etc/modprobe.d/ev3dev.conf` to your project's `rootfs-additions`. If an empty file exists, it will override this default one, but I
+usually create a file with the line commented out so that I remember what
+the special line is.
 
 ## Supported USB WiFi devices
 
