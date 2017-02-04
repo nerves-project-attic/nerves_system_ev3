@@ -1,5 +1,5 @@
 %{"distillery": {:hex, :distillery, "1.1.0", "e9943bd29557e9c252a051d8ac4b47e597cd9bf2a74332b8628eab4954eb51d7", [:mix], []},
   "nerves": {:hex, :nerves, "0.4.7", "c8d08348e6f717cf140da26dc374bcf2f6f7c2bec646073aeab049e08b588173", [:mix], [{:distillery, "~> 1.0", [hex: :distillery, optional: false]}]},
-  "nerves_system_br": {:hex, :nerves_system_br, "0.9.3", "6d9658b3caf166da6e301f18f46eea22aacc4ba8225e4ef4f282847efadcee97", [:mix], []},
+  "nerves_system_br": {:hex, :nerves_system_br, "0.9.4", "5096a9dfec49d4663ccb94c4a4fe45885303fbf31108f7e9400369bdec94b5e7", [:mix], []},
   "nerves_toolchain_armv5tejl_unknown_linux_musleabi": {:hex, :nerves_toolchain_armv5tejl_unknown_linux_musleabi, "0.9.0", "1ec5d575ccce45ff2a46f5dded0efd5a4eb5a285306b6e299b7c937e70d9359c", [:mix], [{:nerves, "~> 0.4.0", [hex: :nerves, optional: false]}, {:nerves_toolchain_ctng, "~> 0.8.0", [hex: :nerves_toolchain_ctng, optional: false]}]},
   "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "0.8.0", "6dff7ed51e1711c5f4da3d559bc528a8265e3dd950dda95f4d6832aed9dbe320", [:mix], []}}
