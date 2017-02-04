@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.10.1
+
+  * Bug fixes
+    * Fix Musl C library/Buildroot issue where an incorrect symlink to libc was
+      created.
+
 ## v0.10.0
 
   * New features
