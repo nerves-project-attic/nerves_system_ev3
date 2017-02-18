@@ -25,6 +25,16 @@ This is the base Nerves System configuration for the Lego Mindstorms EV3 brick.
 | WiFi                 | Requires USB WiFi dongle        |
 | Bluetooth            | Not supported                   |
 
+## Example projects
+
+Since the documentation is sparse here, you may find some example projects
+helpful:
+
+* https://github.com/fhunleth/nerves_ev3_example
+
+If you have a project to share, please help us by adding it to the list and
+sending a pull request. Thanks!
+
 ## Lego device kernel modules
 
 The Lego device kernel modules are not built into the kernel so they need to be loaded by your application at initialization time. To do this, run:
