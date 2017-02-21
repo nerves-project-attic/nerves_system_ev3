@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.10.2
+
+  * WiFi support changes
+    * Add mt7601u driver
+    * Remove rtl8188eu driver since it started triggering kernel panics after
+      the Linux kernel update
+    * Make WiFi drivers modules to avoid issue where kernel tries to load
+      firmware before the rootfs has been mounted
+
 ## v0.10.1
 
   * Bug fixes
