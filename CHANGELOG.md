@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.3
+
+  * Bug fixes
+    * Fix Linux modules vs. compiled in drivers issue
+
 ## v0.10.2
 
   * WiFi support changes
