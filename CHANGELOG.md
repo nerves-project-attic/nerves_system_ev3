@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.4-dev
+
+  * Bug fixes
+    * Cleanup ALSA configuration to remove warning prints
+
 ## v0.10.3
 
   * Bug fixes
