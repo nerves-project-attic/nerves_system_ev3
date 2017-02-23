@@ -1,0 +1,13 @@
+state.legoev3 {
+    control.1 {
+        iface MIXER
+        name 'Playback Volume'
+        value 256
+        comment {
+            access 'read write'
+            type INTEGER
+            count 1
+            range '0 - 256'
+        }
+    }
+}
