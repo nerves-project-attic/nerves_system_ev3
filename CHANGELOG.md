@@ -1,6 +1,8 @@
 # Changelog
 
-## v0.10.4-dev
+## v0.11.0
+  * New Features
+    * Support for Nerves 0.5.0
 
   * Bug fixes
     * Cleanup ALSA configuration to remove warning prints

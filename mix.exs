@@ -21,9 +21,9 @@ defmodule NervesSystemEv3.Mixfile do
   end
 
   defp deps do
-    [{:nerves, "~> 0.4.0"},
+    [{:nerves, "~> 0.4"},
      {:nerves_system_br, "~> 0.9.4"},
-     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.9.0"}]
+     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.10.0"}]
   end
 
   defp description do
