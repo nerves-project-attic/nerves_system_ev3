@@ -69,8 +69,8 @@ the special line is.
 ## Supported USB WiFi devices
 
 The base image includes drivers and firmware for Ralink RT53xx
-(`rt2800usb` driver) and MediaTek MT7601U (`mt7601u`) devices. One option for
-these devices is to get a Tenda W311MI Wireless USB Adapter.
+(`rt2800usb` driver), MediaTek MT7601U (`mt7601u`), and Edimax EW-7811Un (`8192cu`) devices.
+One option for these devices is to get a Tenda W311MI Wireless USB Adapter.
 
 We are still working out which subset of all possible WiFi dongles to
 support in our images. At some point, we may have the option to support
