@@ -1,6 +1,25 @@
 # Changelog
 
-## v0.11.1-dev
+## v0.12.0-dev
+
+This release is NOT backwards compatible with previous releases and will not
+upgrade old systems. With work, it is possible to upgrade old systems, but it is
+not recommended.
+
+  * nerves_system_br v0.12.1
+    * Buildroot 2017.05
+    * Erlang/OTP 19.3
+    * erlinit 1.1.1
+    * fwup 0.15.0
+
+  * New features
+    * The application data partition is now `ext4`. This greatly improves its
+      robustness to corruption. Nerves.Runtime contains code to initialize it on
+      first boot.
+    * Firmware images now contain metadata that can be queried at runtime (see
+      Nerves.Runtime.KV
+    * The boot partition is managed in an A/B style to support more robust
+      firmware updates.
 
 ## v0.11.0
   * New Features
