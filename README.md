@@ -1,6 +1,6 @@
 # Lego Mindstorms EV3
 
-[![Build Status](https://travis-ci.org/nerves-project/nerves_system_ev3.png?branch=master)](https://travis-ci.org/nerves-project/nerves_system_ev3)
+[![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_ev3.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_ev3)
 
 This is the base Nerves System configuration for the Lego Mindstorms EV3 brick.
 
