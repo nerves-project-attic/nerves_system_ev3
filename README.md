@@ -95,9 +95,15 @@ manually load the driver via `modprobe asix`.
 
 On most platforms, the default behavior of Nerves is to hang if something goes wrong.
 This is good for debugging since rebooting makes it easy to lose console
-messages or it might hide the issue completely. Hanging on the EV3 forces you
-to remove and reinsert the batteries since there's no reboot button. The default
-behavior has been changed to power down instead.
+messages or it might hide the issue completely. On the EV3 hanging
+requires a slightly more complex restarting process.
+
+  1. Hold down the Back, center, and left buttons on the EV3 Brick .
+  2. When the screen goes blank, release the Back button .
+  3. When the screen says “Starting,” release the center and left buttons
+
+If you would like to power down instead you will need to change `erlinit.config`
+from `--hang-on-exit` to `---poweroff-on-exit`.
 
 If you're attached to the console, you may see a kernel panic when you run power
 off. From what I can tell, this panic happens after the important parts of
