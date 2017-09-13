@@ -98,9 +98,9 @@ This is good for debugging since rebooting makes it easy to lose console
 messages or it might hide the issue completely. On the EV3 hanging
 requires a slightly more complex restarting process.
 
-  1. Hold down the Back, center, and left buttons on the EV3 Brick .
-  2. When the screen goes blank, release the Back button .
-  3. When the screen says “Starting,” release the center and left buttons
+  1. Hold down the Back, and center buttons on the EV3 Brick
+  2. When the screen goes blank, release the Back button
+  3. When the screen says “Starting,” release the center button
 
 If you would like to power down instead you will need to change `erlinit.config`
 from `--hang-on-exit` to `---poweroff-on-exit`.
