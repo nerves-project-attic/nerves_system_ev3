@@ -3,12 +3,12 @@ defmodule NervesSystemEv3.Mixfile do
 
   @version Path.join(__DIR__, "VERSION")
     |> File.read!
-    |> String.strip
+    |> String.trim
 
   def project do
     [app: :nerves_system_ev3,
      version: @version,
-     elixir: "~> 1.3",
+     elixir: "~> 1.4",
      compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
@@ -21,9 +21,9 @@ defmodule NervesSystemEv3.Mixfile do
   end
 
   defp deps do
-    [{:nerves, "~> 0.5", runtime: false },
-     {:nerves_system_br, "~> 0.12.0", runtime: false },
-     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.10.0", runtime: false}]
+    [{:nerves, "~> 0.7", runtime: false },
+     {:nerves_system_br, "~> 0.14.0", runtime: false },
+     {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.11.0", runtime: false}]
   end
 
   defp description do

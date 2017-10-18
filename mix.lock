@@ -1,5 +1,5 @@
-%{"distillery": {:hex, :distillery, "1.4.1", "546d851bf27ae8fe0727e10e4fc4e146ad836eecee138263a60431e688044ed3", [:mix], [], "hexpm"},
-  "nerves": {:hex, :nerves, "0.6.1", "721d978da4a1c732270b59c13093d7e1806203290ed5703120871a535749c0f7", [:mix], [{:distillery, "~> 1.2", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
-  "nerves_system_br": {:hex, :nerves_system_br, "0.12.1", "a8d7165d728d3bc348c12f9b572cc3e99d8b2c5a3afce27320cf74e64de4fb72", [:mix], [], "hexpm"},
-  "nerves_toolchain_armv5tejl_unknown_linux_musleabi": {:hex, :nerves_toolchain_armv5tejl_unknown_linux_musleabi, "0.10.0", "24571dd2803a7da51e0741a7cccfdb32d4caa64e1606d1dbc27449ea6eeb306c", [:mix], [{:nerves, "~> 0.4", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_toolchain_ctng, "~> 0.9", [hex: :nerves_toolchain_ctng, repo: "hexpm", optional: false]}], "hexpm"},
-  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "0.9.0", "825b2b5bbacc3ad20c8513baafd44978616d5b451e6e052cdb727be81e7cdcac", [:mix], [], "hexpm"}}
+%{"distillery": {:hex, :distillery, "1.5.2", "eec18b2d37b55b0bcb670cf2bcf64228ed38ce8b046bb30a9b636a6f5a4c0080", [:mix], [], "hexpm"},
+  "nerves": {:hex, :nerves, "0.7.5", "3aa6a336b2ad6c1c9589cc2b577511b3c4c375c1ba6c533ab9f88adb8c21f0c3", [:mix], [{:distillery, "~> 1.4", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
+  "nerves_system_br": {:hex, :nerves_system_br, "0.14.0", "bff3e310e93c7143525257289cc1ba957ebaeebbaf6e97428d0d01c13f440e49", [:mix], [], "hexpm"},
+  "nerves_toolchain_armv5tejl_unknown_linux_musleabi": {:hex, :nerves_toolchain_armv5tejl_unknown_linux_musleabi, "0.11.0", "570f90fe712d22535a302a35a95964ec1d7a6c4a96b6476e02bb4c2c096f03cc", [:mix], [{:nerves, "~> 0.7", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_toolchain_ctng, "~> 1.1", [hex: :nerves_toolchain_ctng, repo: "hexpm", optional: false]}], "hexpm"},
+  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "1.1.0", "0f03e4a3f3beef5fe271de0148b9f106c417e57f303f635c21c74b4bd6eb68ee", [:mix], [], "hexpm"}}
