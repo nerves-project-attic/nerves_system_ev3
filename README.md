@@ -62,7 +62,7 @@ module to not touch it. If you're on the EV3, you'll see the following line in
     options legoev3_ports disable_in_port=1
 
 If you want to use port 1, you'll need to disable this. To do this, add a
-`/etc/modprobe.d/ev3dev.conf` to your project's `rootfs-additions`. If an empty file exists, it will override this default one, but I
+`/etc/modprobe.d/ev3dev.conf` to your project's `rootfs_overlay`. If an empty file exists, it will override this default one, but I
 usually create a file with the line commented out so that I remember what
 the special line is.
 
