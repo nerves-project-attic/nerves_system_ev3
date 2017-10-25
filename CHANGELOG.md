@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.12.1
+
+  Updated dependencies
+  * [nerves_system_br v0.14.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.14.1)
+
 ## v0.12.0
 
 This release is NOT backwards compatible with previous releases and will not
