@@ -11,7 +11,7 @@ defmodule NervesSystemEv3.Mixfile do
       app: @app,
       version: @version,
       elixir: "~> 1.4",
-      compilers: Mix.compilers ++ [:nerves_package],
+      compilers: Mix.compilers() ++ [:nerves_package],
       nerves_package: nerves_package(),
       description: description(),
       package: package(),
@@ -27,14 +27,12 @@ defmodule NervesSystemEv3.Mixfile do
   def nerves_package do
     [
       type: :system,
-      version: @version,
-      compiler: :nerves_package,
       artifact_url: [
-        "https://github.com/nerves-project/#{@app}/releases/download/v#{@version}/#{@app}-v#{@version}.tar.gz",
+        "https://github.com/nerves-project/#{@app}/releases/download/v#{@version}/#{@app}-v#{@version}.tar.gz"
       ],
       platform: Nerves.System.BR,
       platform_config: [
-        defconfig: "nerves_defconfig",
+        defconfig: "nerves_defconfig"
       ],
       checksum: package_files()
     ]
@@ -44,7 +42,8 @@ defmodule NervesSystemEv3.Mixfile do
     [
       {:nerves, "~> 0.8", runtime: false},
       {:nerves_system_br, "0.16.1-2017-11", runtime: false},
-      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.12.1", runtime: false, app: false}
+      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.12.1", runtime: false},
+      {:nerves_system_linter, "~> 0.2.2", runtime: false}
     ]
   end
 
@@ -72,10 +71,12 @@ defmodule NervesSystemEv3.Mixfile do
       "VERSION",
       "rootfs_overlay",
       "fwup.conf",
-      "linux-4.4-ev3dev.defconfig",
+      "fwup-revert.conf",
       "post-createfs.sh",
+      "post-build.sh",
+      "linux-4.4-ev3dev.defconfig",
       "nerves_logo_178x128.pbm",
-      "ev3-busybox.config"
+      "ev3-busybox.config",
     ]
   end
 end
