@@ -23,7 +23,7 @@ defmodule NervesSystemEv3.Mixfile do
   def application do
     []
   end
-  
+
   def nerves_package do
     [
       type: :system,
@@ -43,7 +43,7 @@ defmodule NervesSystemEv3.Mixfile do
   defp deps do
     [
       {:nerves, "~> 0.8", runtime: false},
-      {:nerves_system_br, "~> 0.15.0", runtime: false, app: false},
+      {:nerves_system_br, "0.16.1-2017-11", runtime: false},
       {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.12.1", runtime: false, app: false}
     ]
   end
