@@ -6,3 +6,6 @@ set -e
 # active firmware.
 mkdir -p $TARGET_DIR/usr/share/fwup
 $HOST_DIR/usr/bin/fwup -c -f $NERVES_DEFCONFIG_DIR/fwup-revert.conf -o $TARGET_DIR/usr/share/fwup/revert.fw
+
+# Create the symlink to musl
+ln -sf /usr/lib/libc.so $TARGET_DIR/lib/ld-musl-arm.so.1
