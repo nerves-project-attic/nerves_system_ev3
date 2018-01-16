@@ -1,7 +1,30 @@
 # Changelog
 
+## v0.14.0
+
+This version enables the USB Gadget port (MiniUSB port labelled PC). Firmware
+updates can be sent over it. Unfortunately, the virtual serial port doesn't work,
+so the special UART cable on port 1 is still needed to see the console by default.
+
+  Updated dependencies
+  * [nerves_system_br v0.16.1-2017-11](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.16.1-2017-11)
+
+  * Bug fixes
+    * Fixed symlink issue that prevented the system from being used from hex.pm
+
+  * Enhancements
+    * Reboot automatically if Erlang VM exits - This is consistent with other
+      Nerves systems. See rootfs_overlay/etc/erlinit.config if undesired.
+    * Start running nerves_system_linter to check for configuration errors.
+    * Automount the boot partition readonly at `/boot`
+    * Support for reverting firmware.
+
+      See [Reverting Firmware](https://hexdocs.pm/nerves_runtime/readme.html#reverting-firmware) for more info on reverting firmware.
+
+      See [fwup-revert.conf](https://github.com/nerves-project/nerves_system_rpi/blob/master/fwup-revert.conf) for more information on how fwup handles reverting.
+
 ## v0.13.0
-  
+
   Updated dependencies
   * [nerves_system_br v0.15.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.15.0)
   * [toolchain v0.12.1](https://github.com/nerves-project/toolchains/releases/tag/v0.12.1)
