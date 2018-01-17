@@ -41,7 +41,7 @@ defmodule NervesSystemEv3.Mixfile do
   defp deps do
     [
       {:nerves, "~> 0.8", runtime: false},
-      {:nerves_system_br, "0.16.3", runtime: false},
+      {:nerves_system_br, "0.16.4", runtime: false},
       {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.12.1", runtime: false},
       {:nerves_system_linter, "~> 0.2.2", runtime: false}
     ]
