@@ -16,7 +16,9 @@ defmodule NervesSystemEv3.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]
+      aliases: [
+        "deps.loadpaths": ["nerves.env", "deps.loadpaths"],
+        "deps.get": ["deps.get", "nerves.deps.get"]]
     ]
   end
 
@@ -27,8 +29,8 @@ defmodule NervesSystemEv3.Mixfile do
   def nerves_package do
     [
       type: :system,
-      artifact_url: [
-        "https://github.com/nerves-project/#{@app}/releases/download/v#{@version}/#{@app}-v#{@version}.tar.gz"
+      artifact_sites: [
+        {:github_releases, "nerves-project/#{@app}"}
       ],
       platform: Nerves.System.BR,
       platform_config: [
@@ -40,10 +42,10 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 0.8", runtime: false},
-      {:nerves_system_br, "0.16.4", runtime: false},
-      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.12.1", runtime: false},
-      {:nerves_system_linter, "~> 0.2.2", runtime: false}
+      {:nerves, "~> 0.9", runtime: false },
+      {:nerves_system_br, "0.17.0", runtime: false},
+      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.13.0", runtime: false},
+      {:nerves_system_linter, "~> 0.3.0", runtime: false}
     ]
   end
 
