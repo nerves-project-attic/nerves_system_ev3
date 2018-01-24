@@ -168,14 +168,14 @@ workflows:
           filters:
             tags:
               only: /.*/
-      # - build_test:
-      #     context: org-global
-      #     requires:
-      #       - build_system
-      # - deploy_test:
-      #     context: org-global
-      #     requires:
-      #       - build_test
+      - build_test:
+          context: org-global
+          requires:
+            - build_system
+      - deploy_test:
+          context: org-global
+          requires:
+            - build_test
       - deploy_system:
           context: org-global
           requires:
