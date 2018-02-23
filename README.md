@@ -1,6 +1,7 @@
 # Lego Mindstorms EV3
 
 [![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_ev3.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_ev3)
+[![Hex version](https://img.shields.io/hexpm/v/nerves_system_ev3.svg "Hex version")](https://hex.pm/packages/nerves_system_ev3)
 
 This is the base Nerves System configuration for the Lego Mindstorms EV3 brick.
 
@@ -69,7 +70,7 @@ read sensors, and everything else that the EV3 can do.
 Since the documentation is sparse here, you may find some example projects
 helpful:
 
-* https://github.com/fhunleth/nerves_ev3_example
+* [nerves_ev3_example](https://github.com/fhunleth/nerves_ev3_example)
 
 If you have a project to share, please help us by adding it to the list and
 sending a pull request. Thanks!

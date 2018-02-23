@@ -3,8 +3,8 @@ defmodule NervesSystemEv3.Mixfile do
 
   @app :nerves_system_ev3
   @version Path.join(__DIR__, "VERSION")
-    |> File.read!
-    |> String.trim
+           |> File.read!()
+           |> String.trim()
 
   def project do
     [
@@ -16,14 +16,19 @@ defmodule NervesSystemEv3.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      aliases: [
-        "deps.loadpaths": ["nerves.env", "deps.loadpaths"],
-        "deps.get": ["deps.get", "nerves.deps.get"]]
+      aliases: [loadconfig: [&bootstrap/1], docs: ["docs", &copy_images/1]],
+      docs: [extras: ["README.md"], main: "readme"]
     ]
   end
 
   def application do
     []
+  end
+
+  defp bootstrap(args) do
+    System.put_env("MIX_TARGET", "ev3")
+    Application.start(:nerves_bootstrap)
+    Mix.Task.run("loadconfig", args)
   end
 
   def nerves_package do
@@ -42,10 +47,11 @@ defmodule NervesSystemEv3.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 0.9", runtime: false },
-      {:nerves_system_br, "0.17.0", runtime: false},
-      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 0.13.0", runtime: false},
-      {:nerves_system_linter, "~> 0.3.0", runtime: false}
+      {:nerves, "~> 1.0-rc", runtime: false},
+      {:nerves_system_br, "~> 1.0-rc", runtime: false},
+      {:nerves_toolchain_armv5tejl_unknown_linux_musleabi, "~> 1.0-rc", runtime: false},
+      {:nerves_system_linter, "~> 0.3.0", runtime: false},
+      {:ex_doc, "~> 0.18", only: :dev}
     ]
   end
 
@@ -78,7 +84,12 @@ defmodule NervesSystemEv3.Mixfile do
       "post-build.sh",
       "linux-4.4-ev3dev.defconfig",
       "nerves_logo_178x128.pbm",
-      "ev3-busybox.config",
+      "ev3-busybox.config"
     ]
+  end
+
+  # Copy the images referenced by docs, since ex_doc doesn't do this.
+  defp copy_images(_) do
+    File.cp_r("assets", "doc/assets")
   end
 end
