@@ -1,4 +1,4 @@
-defmodule NervesSystemEv3.Mixfile do
+defmodule NervesSystemEv3.MixProject do
   use Mix.Project
 
   @app :nerves_system_ev3
