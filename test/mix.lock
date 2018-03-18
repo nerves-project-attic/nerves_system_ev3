@@ -1,11 +1,11 @@
 %{
   "distillery": {:hex, :distillery, "1.5.2", "eec18b2d37b55b0bcb670cf2bcf64228ed38ce8b046bb30a9b636a6f5a4c0080", [:mix], [], "hexpm"},
-  "elixir_make": {:hex, :elixir_make, "0.4.0", "992f38fabe705bb45821a728f20914c554b276838433349d4f2341f7a687cddf", [:mix], [], "hexpm"},
+  "elixir_make": {:hex, :elixir_make, "0.4.1", "6628b86053190a80b9072382bb9756a6c78624f208ec0ff22cb94c8977d80060", [:mix], [], "hexpm"},
   "nerves": {:hex, :nerves, "1.0.0-rc.0", "5c6cf122611d0024d06b88593aa9af46180d30712fc6ff07fa25fb9100125f1e", [:mix], [{:distillery, "~> 1.4", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves_network": {:hex, :nerves_network, "0.3.6", "c95779283ace071e9d12882d6a80e31edc8c476012adc61aba2ff6c306ef97b3", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:nerves_network_interface, "~> 0.4.0", [hex: :nerves_network_interface, repo: "hexpm", optional: false]}, {:nerves_wpa_supplicant, "~> 0.3.0", [hex: :nerves_wpa_supplicant, repo: "hexpm", optional: false]}, {:system_registry, "~> 0.4", [hex: :system_registry, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves_network_interface": {:hex, :nerves_network_interface, "0.4.4", "200b1a84bc1a7fdeaf3a1e0e2d4e9b33e240b034e73f39372768d43f8690bae0", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
-  "nerves_runtime": {:hex, :nerves_runtime, "0.5.3", "7447a3e718762f3901046f72cc824e528f8d0565a581b8ae58f4f5b6436bca7f", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:system_registry, "~> 0.5", [hex: :system_registry, repo: "hexpm", optional: false]}], "hexpm"},
-  "nerves_system_br": {:hex, :nerves_system_br, "1.0.0-rc.0", "63400e1a12baa307603d9d0b30fe87de1f67623f71156b278f0be5ce74c7d117", [:mix], [], "hexpm"},
+  "nerves_runtime": {:hex, :nerves_runtime, "0.6.0", "b7336e34e65bb6c3792525587b639c4027773496a48c2eba93a78b4e7166a7ed", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:system_registry, "~> 0.5", [hex: :system_registry, repo: "hexpm", optional: false]}], "hexpm"},
+  "nerves_system_br": {:hex, :nerves_system_br, "1.0.0-rc.2", "38c97346108d25256f84f26c7265074ecee31a74585bb4a9373610f1df1df376", [:mix], [], "hexpm"},
   "nerves_system_linter": {:hex, :nerves_system_linter, "0.3.0", "84e0f63c8ac196b16b77608bbe7df66dcf352845c4e4fb394bffd2b572025413", [:mix], [], "hexpm"},
   "nerves_system_test": {:git, "https://github.com/nerves-project/nerves_system_test.git", "e2c1b8efb0eb2ae5ed80d48dd3f11fcb1022a68a", []},
   "nerves_toolchain_armv5tejl_unknown_linux_musleabi": {:hex, :nerves_toolchain_armv5tejl_unknown_linux_musleabi, "1.0.0-rc.0", "60c423ec0cdbd713fb25f4d98fd0fd7c8ef73ee3d02e88b0e6715e8d266df414", [:mix], [{:nerves, "~> 1.0-rc", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_toolchain_ctng, "~> 1.4-rc", [hex: :nerves_toolchain_ctng, repo: "hexpm", optional: false]}], "hexpm"},
@@ -16,6 +16,6 @@
   "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], [], "hexpm"},
   "shoehorn": {:hex, :shoehorn, "0.2.0", "6aa80804145c545c59af01980d255209483b14826f53411b4a8797b24c323c20", [:mix], [{:distillery, "~> 1.0", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
   "system_registry": {:hex, :system_registry, "0.7.0", "cd3aaf2c15392fa60f93869dde49f536fcf60e54f3b15db737e7d4ebcac108f4", [:mix], [], "hexpm"},
-  "system_registry_term_storage": {:hex, :system_registry_term_storage, "0.1.0", "fdded792eb9b5428fa2804a50e25e7140056a48a3086b8efde77b97308236b22", [:mix], [{:system_registry, "~> 0.7", [hex: :system_registry, repo: "hexpm", optional: false]}], "hexpm"},
+  "system_registry_term_storage": {:hex, :system_registry_term_storage, "0.1.1", "342fa1d3ce881fee435d3c3109ac8bd371f6ecb6ff4855a52bf2e212853b2408", [:mix], [{:system_registry, "~> 0.7", [hex: :system_registry, repo: "hexpm", optional: false]}], "hexpm"},
   "websocket_client": {:hex, :websocket_client, "1.2.4", "14ec1ca4b6d247b44ccd9a80af8f6ca98328070f6c1d52a5cb00bc9d939d63b8", [:rebar3], [], "hexpm"},
 }
