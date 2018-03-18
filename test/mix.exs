@@ -1,27 +1,28 @@
-if Mix.env == :test do
-  hash = :os.cmd('git rev-parse HEAD')
+if Mix.env() == :test do
+  hash =
+    :os.cmd('git rev-parse HEAD')
     |> to_string
-    |> String.trim
+    |> String.trim()
+
   System.put_env("NERVES_FW_VCS_IDENTIFIER", hash)
 end
 
-defmodule Test.Mixfile do
+defmodule Test.MixProject do
   use Mix.Project
 
   def project do
-    [app: :test,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     archives: [nerves_bootstrap: "~> 1.0-rc"],
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     aliases: [loadconfig: [&bootstrap/1]],
-     deps: deps()]
+    [
+      app: :test,
+      version: "0.1.0",
+      elixir: "~> 1.4",
+      archives: [nerves_bootstrap: "~> 1.0-rc"],
+      start_permanent: Mix.env() == :prod,
+      aliases: [loadconfig: [&bootstrap/1]],
+      deps: deps()
+    ]
   end
 
-  # Configuration for the OTP application.
-  #
-  # Type `mix help compile.app` for more information.
+  # Type `mix help compile.app` to learn about applications.
   def application, do: []
 
   defp bootstrap(args) do
@@ -30,20 +31,11 @@ defmodule Test.Mixfile do
     Mix.Task.run("loadconfig", args)
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
+  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:nerves_system_ev3, path: "../", runtime: false},
       {:nerves_system_test, github: "nerves-project/nerves_system_test"}
     ]
   end
-
 end
