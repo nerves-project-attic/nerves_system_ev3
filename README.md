@@ -28,6 +28,15 @@ This is the base Nerves System configuration for the Lego Mindstorms EV3 brick.
 
 ## Using
 
+The most common way of using this Nerves System is create a project with `mix
+nerves.new` and to export `MIX_TARGET=ev3`. See the [Getting started
+guide](https://hexdocs.pm/nerves/getting-started.html#creating-a-new-nerves-app)
+for more information.
+
+If you need custom modifications to this system for your device, clone this
+repository and update as described in [Making custom
+systems](https://hexdocs.pm/nerves/systems.html#customizing-your-own-nerves-system)
+
 I recommend creating a project that uses
 [nerves_init_gadget](https://github.com/nerves-project/nerves_init_gadget) to
 get started on the EV3. This makes using the EV3 similar to the Raspberry Pi
