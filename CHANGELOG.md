@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.2.0
+
+This release updates Erlang to OTP 21.0
+
+* Updated dependencies
+  * [nerves_system_br v1.3.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.3.0)
+
 ## v1.1.1
 
 This release fixes some issues and adds firmware UUID support. This support can
