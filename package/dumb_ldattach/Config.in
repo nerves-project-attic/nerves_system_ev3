@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DUMB_LDATTACH
+	bool "dumb_ldattach"
+	help
+	  Simplified version of ldattach from util-linux.
+
+	  https://github.com/fhunleth/dumb_ldattach
+
