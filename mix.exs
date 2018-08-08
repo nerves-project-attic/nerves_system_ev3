@@ -72,19 +72,21 @@ defmodule NervesSystemEv3.MixProject do
 
   defp package_files do
     [
+      "package",
+      "rootfs_overlay",
+      "Config.in",
+      "external.mk",
+      "fwup-revert.conf",
+      "fwup.conf",
       "LICENSE",
+      "linux-4.4-ev3dev.defconfig",
       "mix.exs",
       "nerves_defconfig",
-      "README.md",
-      "VERSION",
-      "rootfs_overlay",
-      "fwup.conf",
-      "fwup-revert.conf",
-      "post-createfs.sh",
-      "post-build.sh",
-      "linux-4.4-ev3dev.defconfig",
       "nerves_logo_178x128.pbm",
-      "ev3-busybox.config"
+      "post-build.sh",
+      "post-createfs.sh",
+      "README.md",
+      "VERSION"
     ]
   end
 
