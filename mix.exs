@@ -72,8 +72,10 @@ defmodule NervesSystemEv3.MixProject do
 
   defp package_files do
     [
+      "fwup_include",
       "package",
       "rootfs_overlay",
+      "CHANGELOG.md",
       "Config.in",
       "external.mk",
       "fwup-revert.conf",
